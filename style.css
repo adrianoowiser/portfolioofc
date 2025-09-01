@@ -1,1 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #333;
+  text-align: center; /* centralizar textos */
+  line-height: 1.6;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+  color: #004aad;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== MENU DE BOTÕES ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #004aad;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+nav button {
+  background: #ffdd57;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+nav button:hover {
+  background: #ffc107;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== BOTÃO VOLTAR TOPO ===== */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+#backToTop:hover {
+  background: #002d6b;
+}
+
 
