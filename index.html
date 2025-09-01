@@ -4,52 +4,193 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guia do Desenvolvedor Web Iniciante</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== ESTILO GLOBAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2 {
+      margin-bottom: 10px;
+      color: #004aad;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* ===== MENU SUPERIOR ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #004aad;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    /* ===== BOTÕES ===== */
+    #darkModeBtn {
+      background: #ffdd57;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #darkModeBtn:hover {
+      background: #ffc107;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #004aad;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* ===== DARK MODE ===== */
+    body.dark {
+      background: #121212;
+      color: #f5f5f5;
+    }
+
+    body.dark section {
+      background: #1e1e1e;
+      color: #f5f5f5;
+    }
+
+    body.dark nav {
+      background: #222;
+    }
+  </style>
 </head>
 <body>
-  <header>
+
+  <!-- ===== MENU ===== -->
+  <nav>
+    <h2>Guia Dev</h2>
+    <ul>
+      <li><a href="#intro">Início</a></li>
+      <li><a href="#aprendizado">Aprendizado</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#mentalidade">Mentalidade</a></li>
+    </ul>
+    <button id="darkModeBtn">🌙 Modo Escuro</button>
+  </nav>
+
+  <!-- ===== CONTEÚDO ===== -->
+  <section id="intro">
     <h1>Guia do Desenvolvedor Web Iniciante</h1>
-    <p>Por Adriano 🚀</p>
-  </header>
+    <p>Bem-vindo ao guia! Aqui você encontra dicas práticas e motivacionais para iniciar sua jornada em HTML, CSS e JavaScript.</p>
+  </section>
 
-  <main>
-    <section>
-      <h2>1. Mentalidade de Aprendizagem</h2>
-      <p>Não copie código às cegas. Veja erros como professores. Aprenda com os erros e use a IA como mentor.</p>
-    </section>
+  <section id="aprendizado">
+    <h2>📘 Aprendizado</h2>
+    <p>Aprenda a programar praticando diariamente. Aceite os erros como parte do processo. Use a IA como mentora para acelerar seu aprendizado.</p>
+  </section>
 
-    <section>
-      <h2>2. Estrutura Essencial (HTML, CSS, JS)</h2>
-      <ul>
-        <li><strong>HTML:</strong> estrutura básica de páginas.</li>
-        <li><strong>CSS:</strong> controle de aparência (cores, fontes, layout).</li>
-        <li><strong>JavaScript:</strong> adição de interatividade e lógica.</li>
-      </ul>
-    </section>
+  <section id="projetos">
+    <h2>💻 Projetos</h2>
+    <p>Construa pequenos projetos para aplicar seus conhecimentos. Publique-os no GitHub Pages, como este guia, para montar um portfólio sólido.</p>
+  </section>
 
-    <section>
-      <h2>3. Como Usar a IA no Processo</h2>
-      <p>Use a IA para entender a lógica por trás do código. Não apenas para gerar código pronto.</p>
-    </section>
+  <section id="mentalidade">
+    <h2>🚀 Mentalidade</h2>
+    <p>Tenha disciplina e consistência. O segredo não é aprender tudo de uma vez, mas evoluir um pouco a cada dia.</p>
+  </section>
 
-    <section>
-      <h2>4. Prática Recomendada</h2>
-      <p>Crie pequenos projetos, como um portfólio ou uma to-do list, para consolidar seus aprendizados.</p>
-    </section>
+  <!-- ===== BOTÃO VOLTAR TOPO ===== -->
+  <button id="backToTop">⬆</button>
 
-    <section>
-      <h2>5. Quando der Erro</h2>
-      <p>Considere cada erro como uma oportunidade de aprendizado. Pergunte sempre: "O que a mensagem de erro está me dizendo?"</p>
-    </section>
+  <!-- ===== SCRIPT JS ===== -->
+  <script>
+    // Botão de modo escuro
+    const darkModeBtn = document.getElementById("darkModeBtn");
+    const body = document.body;
 
-    <section>
-      <h2>6. Mercado de Trabalho</h2>
-      <p>Aprenda resolvendo problemas, mostre projetos no GitHub, e mostre que você sabe aprender e evoluir.</p>
-    </section>
-  </main>
+    // Carregar preferência salva
+    if(localStorage.getItem("darkMode") === "enabled") {
+      body.classList.add("dark");
+      darkModeBtn.textContent = "☀️ Modo Claro";
+    }
 
-  <footer>
-    <p>Projeto criado por Adriano ✨</p>
-  </footer>
+    darkModeBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if(body.classList.contains("dark")) {
+        darkModeBtn.textContent = "☀️ Modo Claro";
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        darkModeBtn.textContent = "🌙 Modo Escuro";
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+
+    // Botão voltar ao topo
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if(window.scrollY > 200) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
 </body>
 </html>
