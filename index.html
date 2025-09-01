@@ -8,37 +8,22 @@
 </head>
 <body>
 
-  <!-- ===== MENU ===== -->
+  <header>
+    <h1>🚀 Guia do Desenvolvedor Web</h1>
+    <p>Clique em um tópico abaixo para ver os detalhes</p>
+  </header>
+
+  <!-- ===== BOTÕES ===== -->
   <nav>
-    <button onclick="scrollToSection('intro')">🏠 Início</button>
-    <button onclick="scrollToSection('aprendizado')">📘 Aprendizado</button>
-    <button onclick="scrollToSection('projetos')">💻 Projetos</button>
-    <button onclick="scrollToSection('mentalidade')">🚀 Mentalidade</button>
+    <button onclick="showContent('aprendizado')">📘 Aprendizado</button>
+    <button onclick="showContent('projetos')">💻 Projetos</button>
+    <button onclick="showContent('mentalidade')">🧠 Mentalidade</button>
   </nav>
 
-  <!-- ===== CONTEÚDO ===== -->
-  <section id="intro">
-    <h1>Guia do Desenvolvedor Web Iniciante</h1>
-    <p>Bem-vindo ao guia! Aqui você encontra dicas práticas e motivacionais para iniciar sua jornada em HTML, CSS e JavaScript.</p>
+  <!-- ===== ÁREA DE CONTEÚDO ===== -->
+  <section id="content">
+    <p>Selecione um tópico acima para visualizar a explicação.</p>
   </section>
-
-  <section id="aprendizado">
-    <h2>📘 Aprendizado</h2>
-    <p>Aprenda praticando todos os dias. Errar faz parte do processo. Use a IA como mentora e nunca pare de aprender.</p>
-  </section>
-
-  <section id="projetos">
-    <h2>💻 Projetos</h2>
-    <p>Construa projetos simples, publique no GitHub Pages e monte seu portfólio. É assim que você mostra sua evolução para o mercado.</p>
-  </section>
-
-  <section id="mentalidade">
-    <h2>🚀 Mentalidade</h2>
-    <p>Disciplina e consistência superam talento natural. Evolua um pouco a cada dia e os resultados virão.</p>
-  </section>
-
-  <!-- ===== BOTÃO VOLTAR TOPO ===== -->
-  <button id="backToTop">⬆</button>
 
   <script src="script.js"></script>
 </body>
