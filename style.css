@@ -6,81 +6,71 @@
 }
 
 body {
-  background: #f5f5f5;
+  background: #f9f9f9;
   color: #333;
-  text-align: center; /* centralizar textos */
+  text-align: center;
   line-height: 1.6;
+  padding: 20px;
 }
 
-h1, h2 {
-  margin-bottom: 15px;
+/* ===== HEADER ===== */
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
   color: #004aad;
+  margin-bottom: 10px;
 }
 
-p {
-  margin-bottom: 20px;
+header p {
   font-size: 18px;
+  color: #666;
 }
 
-section {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 40px 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* ===== MENU DE BOTÕES ===== */
+/* ===== BOTÕES ===== */
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #004aad;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  padding: 15px;
-  z-index: 1000;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 nav button {
-  background: #ffdd57;
+  background: linear-gradient(135deg, #004aad, #007bff);
+  color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s;
-  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 nav button:hover {
-  background: #ffc107;
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #003580, #0056b3);
 }
 
-/* ===== BOTÃO VOLTAR TOPO ===== */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #004aad;
-  color: white;
-  border: none;
-  padding: 14px 18px;
-  border-radius: 50%;
+/* ===== ÁREA DE CONTEÚDO ===== */
+#content {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
   font-size: 18px;
-  cursor: pointer;
-  display: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
-#backToTop:hover {
-  background: #002d6b;
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-
